@@ -213,9 +213,9 @@ class yahoo_shop_crawl:
 
 
 yahoo_shop_crawl = yahoo_shop_crawl()
-#data = yahoo_shop_crawl.get_html("水冷扇")
+#data = yahoo_shop_crawl.get_html("----")
 #soup = yahoo_shop_crawl.html_soup(data)
-dict_prod_info = yahoo_shop_crawl.main("ps5主機預購")
+dict_prod_info = yahoo_shop_crawl.main("----")
 yahoo_shop_crawl.set_save_path('your_path')
 #yahoo_shop_crawl.get_save_path()
-yahoo_shop_crawl.dict_to_excel(dict_prod_info,"ps5主機預購_")
+yahoo_shop_crawl.dict_to_excel(dict_prod_info,"-----")
