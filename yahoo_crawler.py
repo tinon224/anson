@@ -42,7 +42,7 @@ class yahoo_shop_crawl:
 	def html_soup(self,html):               #soup
 		self.html = html                    #HTML.text
 		soup = bs(html,"html.parser")      
-		 #some web need to encode copy this code >>> soup.encoding = 'UTF-8'
+		#soup.encoding = 'UTF-8'
 		return soup
 
 	def get_max_pages(self,soup):
