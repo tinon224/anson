@@ -21,12 +21,12 @@ class yahoo_shop_crawl:
 		
 
 
-	def get_html(self,item, order_params = None, is_url = False, page = 1):                 #requests.get()
+	def get_html(self,filter_params = &,item, order_params = None, is_url = False, page = 1):                 #requests.get()
 		headers = {'headers,cookies'}
 		if is_url:
 			html = requests.get(item,headers = headers)	                         #get all goods detail info, item should be a URL.
 		else:
-			html = requests.get('https://tw.buy.yahoo.com/search/product?p={}&pg={}&{}'.format(item,page,order_params))     # get the search page info, item is the search keyword, page is number of the page
+			html = requests.get('https://tw.buy.yahoo.com/search/product?{}p={}&pg={}&{}'.format(filter_params,item,page,order_params))     # get the search page info, item is the search keyword, page is number of the page
 
 		if html.status_code != requests.codes.ok:
 			print(f'requests_error：{item}')
