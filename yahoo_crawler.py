@@ -22,7 +22,7 @@ class yahoo_shop_crawl:
 
 
 	def get_html(self,item, order_params = None, is_url = False, page = 1):                 #requests.get()
-		headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36'}
+		headers = {'headers,cookies'}
 		if is_url:
 			html = requests.get(item,headers = headers)	                         #get all goods detail info, item should be a URL.
 		else:
@@ -216,6 +216,6 @@ yahoo_shop_crawl = yahoo_shop_crawl()
 #data = yahoo_shop_crawl.get_html("水冷扇")
 #soup = yahoo_shop_crawl.html_soup(data)
 dict_prod_info = yahoo_shop_crawl.main("ps5主機預購")
-yahoo_shop_crawl.set_save_path('C:/Users/poly119/Desktop/階梯圖/PY')
+yahoo_shop_crawl.set_save_path('your_path')
 #yahoo_shop_crawl.get_save_path()
 yahoo_shop_crawl.dict_to_excel(dict_prod_info,"ps5主機預購_")
